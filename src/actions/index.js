@@ -6,6 +6,9 @@ import {
 	SET_LANGUAGE,
 	TOGGLE_MENU,
 	SET_LAST_SCREEN_NAME,
+	
+	ZOOM_IN,
+	ZOOM_OUT,
 } from './actionTypes';
 
 export function navigateToPage(page) {
@@ -46,6 +49,18 @@ export function setLastScreenName(name) {
 	return {
 		type: SET_LAST_SCREEN_NAME,
 		name
+	}
+}
+
+export function mapZoomIn() {
+	return {
+		type: ZOOM_IN,
+	}
+}
+
+export function mapZoomOut() {
+	return {
+		type: ZOOM_OUT,
 	}
 }
 

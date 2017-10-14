@@ -7,3 +7,6 @@ export const SET_LANGUAGE = 'SET_LANGUAGE';
 
 export const TOGGLE_MENU = 'TOGGLE_MENU';
 export const SET_LAST_SCREEN_NAME = 'SET_LAST_SCREEN_NAME';
+
+export const ZOOM_IN = 'ZOOM_IN';
+export const ZOOM_OUT = 'ZOOM_OUT';

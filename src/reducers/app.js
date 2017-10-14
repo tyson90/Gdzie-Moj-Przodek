@@ -4,9 +4,13 @@ import {
 	SET_LANGUAGE,
 	TOGGLE_MENU,
 	SET_LAST_SCREEN_NAME,
+	
+	ZOOM_IN,
+	ZOOM_OUT,
 } from '../actions/actionTypes';
 
 import { Logger } from '../Helper';
+import { zooms } from '../Data';
 
 const menuRoutes = [
 	'Menu',
@@ -18,6 +22,7 @@ const defaultState = {
 	lang: 'en',
 	menu_is_opened: false,
 	last_screen_name: null,
+	zoom: zooms.out,
 }
 
 export function app(state=defaultState, action) {
@@ -40,7 +45,7 @@ export function app(state=defaultState, action) {
 			break;
 			
 		case TOGGLE_MENU:
-			Logger.log(state.last_screen_name, menuRoutes.indexOf(state.last_screen_name) > -1);
+			// Logger.log(state.last_screen_name, menuRoutes.indexOf(state.last_screen_name) > -1);
 			nextState = Object.assign({}, state, {
 				menu_is_opened: menuRoutes.indexOf(state.last_screen_name) > -1
 			});
@@ -49,6 +54,19 @@ export function app(state=defaultState, action) {
 		case SET_LAST_SCREEN_NAME:
 			nextState = Object.assign({}, state, {
 				last_screen_name: action.name
+			});
+			break;
+			
+		case ZOOM_IN:
+			nextState = Object.assign({}, state, {
+				zoom: zooms.in
+			});
+			// Logger.dumpLog(nextState);
+			break;
+			
+		case ZOOM_OUT:
+			nextState = Object.assign({}, state, {
+				zoom: zooms.out
 			});
 			break;
 	}

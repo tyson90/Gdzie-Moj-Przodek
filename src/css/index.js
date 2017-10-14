@@ -54,14 +54,6 @@ export const colors = {
   error: palette.error,
 }
 
-const carParams = {
-  w: 70,
-  h: 146,
-  scale: 1,
-  topR: 32,
-  bottomR: 22,
-}
-
 const double = x => {
   return x.toFixed(2) -0
 }
@@ -439,54 +431,6 @@ const app_css = {
     overflow: 'hidden',
   },
   
-  car: {
-    width: carParams.w *1,
-    height: carParams.h *1,
-    maxWidth: '100%',
-    overflow: 'hidden',
-    position: 'relative',
-    // borderColor: '#fff',
-    // borderWidth: 1,
-  },
-  car_image: {
-    width: '100%',
-    height: '100%',
-  },
-  car_border_radius: {
-    borderTopLeftRadius: carParams.topR *1,
-    borderTopRightRadius: carParams.topR *1,
-    borderBottomLeftRadius: carParams.bottomR *1,
-    borderBottomRightRadius: carParams.bottomR *1,
-  },
-  car_selector: {
-    borderWidth: 2,
-    borderStyle: 'dashed',
-    borderColor: 'transparent',
-    borderRadius: em(0.4),
-    padding: em(0.5),
-  },
-  selected_car: {
-    borderColor: colors.secondary,
-  },
-  car_rotated: {
-    left: {
-      transform: [{ rotate: '-90deg' }],
-      margin: -(Math.floor((Math.max(carParams.w, carParams.h) - Math.min(carParams.w, carParams.h)) /2) -1) *1
-    },
-    right: {
-      transform: [{ rotate: '90deg' }],
-      margin: -(Math.floor((Math.max(carParams.w, carParams.h) - Math.min(carParams.w, carParams.h)) /2) -1) *1
-    },
-  },
-  car_lights: {
-    // position: 'absolute',
-    top: 0,
-    left: 0,
-    // width: carParams.w *1,
-    width: '100%',
-    zIndex: 2,
-  },
-  
   settings_color: {
     width: 60,
     height: 60,
@@ -509,57 +453,6 @@ const app_css = {
   },
   setup_lang_item_border: {
     borderRadius: em(0.7),
-  },
-  
-  car_track: {
-    alignItems: 'center',
-  },
-  car_on_track: {
-    position: 'absolute',
-  },
-  
-  speedometer: {
-    flex: 1,
-    position: 'absolute',
-    top: 0,
-    backgroundColor: colors.light,
-    width: '100%',
-    paddingVertical: em(0.1),
-    // borderWidth: 2,
-    // borderStyle: 'dashed',
-    // borderColor: 'cyan',
-    // borderRadius: 2,
-  },
-  speedometer_txt: {
-    color: colors.dark,
-    fontSize: em(1.3),
-  },
-  
-  controls: {
-    wrapper: {
-      flex: 1,
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      // borderWidth: 2,
-      // borderStyle: 'dotted',
-      // borderColor: 'yellow',
-      // borderRadius: 2,
-      
-    },
-    button: {
-      marginVertical: vw(7),
-      width: vw(14 -2),
-      height: vw(14 -2),
-      borderRadius: vw(7),
-      backgroundColor: colors.light,
-      borderWidth: vw(1),
-      borderStyle: 'solid',
-      borderColor: colors.dark,
-    },
-    btn_active: {
-      backgroundColor: colors.primary,
-    },
   },
   
   map: {
