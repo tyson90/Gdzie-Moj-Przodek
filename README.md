@@ -1,2 +1,1 @@
-# Gdzie-Moj-Przodek
-# test commit
+# Gdzie Mój Przodek
