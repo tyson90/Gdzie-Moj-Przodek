@@ -59,7 +59,7 @@ const ReduxApp = ({dispatch, nav, app}) => {
 	  <View style={css.body}>
 	  	<Loading loading={false/*app.loading*/} />
 			<NavApp navigation={addNavigationHelpers({dispatch, state: nav})} />
-			<MenuOpener navigation={addNavigationHelpers({dispatch, state: nav})} />
+			<MenuOpener navigation={addNavigationHelpers({dispatch, state: nav})} isOpen={app.menu_is_opened} />
 		</View>
 	);
 }

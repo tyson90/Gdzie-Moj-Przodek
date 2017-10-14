@@ -5,7 +5,7 @@ import { css } from '../css';
 
 export const MenuOpener = (props) => (
 	<Touchable
-		style={css.menu_opener}
+		style={[css.menu_opener, (props.isOpen ? {display: 'none'} : null)]}
 		onPress={() => { props.navigation.navigate('Menu') }}
 	>
 		<View style={css.menu_opener_dot} />

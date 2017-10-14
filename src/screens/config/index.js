@@ -12,7 +12,7 @@ import { css, colors } from '../../css';
 export function registerDrawerScreens() {
 	return {
 		'ds.home': { screen: ScreenHome },
-		'ds.app_info': { screen: ScreenAppInfo },
+		'ds.mapa': { screen: ScreenAppInfo },
 	}
 }
 

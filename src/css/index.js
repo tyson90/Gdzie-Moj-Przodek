@@ -114,6 +114,7 @@ const app_css = {
         paddingTop: 30,
       },
     }),
+    zIndex: 11,
   },
   drawer_item: {
     
@@ -394,12 +395,13 @@ const app_css = {
   
   menu_opener: {
     position: 'absolute',
-    bottom: 3,
-    left: 3,
-    padding: 5,
-    paddingBottom: 2,
+    top: 24+5,
+    left: 5,
+    padding: 6,
+    paddingBottom: 0,
     backgroundColor: colors.light,
     borderRadius: 5,
+    zIndex: 8,
   },
   // menu_opener_txt: {
   //   fontSize: em(3),
@@ -408,10 +410,10 @@ const app_css = {
   // },
   menu_opener_dot: {
     backgroundColor: colors.semi_dark,
-    width: 6,
-    height: 6,
-    borderRadius: 3,
-    marginBottom: 3,
+    width: 24,
+    height: 3,
+    borderRadius: 1.5,
+    marginBottom: 6,
   },
 // }
 
@@ -557,6 +559,21 @@ const app_css = {
     },
     btn_active: {
       backgroundColor: colors.primary,
+    },
+  },
+  
+  map: {
+    wrapper: {
+      flex: 1,
+      width: '100%',
+      // borderWidth: 2,
+      // borderStyle: 'dashed',
+      // borderColor: 'cyan',
+      // borderRadius: 2,
+    },
+    inner: {
+      // borderColor: 'red',
+      // borderStyle: 'dotted',
     },
   },
 }

@@ -4,6 +4,8 @@ import {
 	APP_LOADING_START,
 	APP_LOADING_END,
 	SET_LANGUAGE,
+	TOGGLE_MENU,
+	SET_LAST_SCREEN_NAME,
 } from './actionTypes';
 
 export function navigateToPage(page) {
@@ -31,6 +33,19 @@ export function appLoadingEnd() {
 	return {
 		type: APP_LOADING_END,
 		loading: false
+	}
+}
+
+export function toggleMenuOpener() {
+	return {
+		type: TOGGLE_MENU
+	}
+}
+
+export function setLastScreenName(name) {
+	return {
+		type: SET_LAST_SCREEN_NAME,
+		name
 	}
 }
 

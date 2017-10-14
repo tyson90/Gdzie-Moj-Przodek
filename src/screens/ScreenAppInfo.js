@@ -13,33 +13,47 @@ import {
 	Err,
 } from '../components';
 
+import MapView from 'react-native-maps';
+
 import { _ } from '../i18n';
+import { css } from '../css';
 
 class Screen extends ComponentForScreen {
+	constructor(...args) {
+		super(...args);
+		
+		this.state = this.getInitialState();
+	}
+	
 	static navigationOptions = {
-    drawerLabel: (<DrawerLabel title={'menu.app_info'} route={'ds.app_info'} />),
+    drawerLabel: (<DrawerLabel title={'menu.mapa'} route={'ds.mapa'} />),
   }
   
+  getInitialState() {
+	  return {
+	    region: {
+	      latitude: 52.2297700,
+	      longitude: 21.0117800,
+        latitudeDelta: 0.0922 *5,
+	      longitudeDelta: 0.0421 *5,
+	    },
+	  };
+	}
+
+	onRegionChange(region) {
+	  this.setState({ region });
+	}
+
+  
   render() {
-  	console.log((DeviceInfo));
 		return (
 			<ScreenView>
-				<Grid w={1}>
-					<View>
-						<View><Text>{_('appinfo.version')}</Text></View>
-						<View><Text>{'0.0.0 (000)'}</Text></View>
-						<View><Text>{DeviceInfo.Version}</Text></View>
-					</View>
-				
-					<View>
-						<View><Text>{_('appinfo.author')}</Text></View>
-						<View><Text>{'---'}</Text></View>
-					</View>
-				
-					<View>
-						<View><Err>{'There is an error'}</Err></View>
-					</View>
-				</Grid>
+				<View style={css.map.wrapper}>
+					<MapView style={[css.map.wrapper, css.map.inner]}
+			      region={this.state.region}
+			      onRegionChange={(region) => { this.onRegionChange(region) }}
+			    />
+			  </View>
 			</ScreenView>
 		);
 	}

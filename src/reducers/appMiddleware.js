@@ -1,10 +1,13 @@
 import {
 	NAVIGATE_TO_ROUTE,
   SET_LANGUAGE,
+  TOGGLE_MENU,
 } from '../actions/actionTypes';
 
 import {
 	navigateToPage,
+  toggleMenuOpener,
+  setLastScreenName,
 } from '../actions';
 
 import {
@@ -25,6 +28,12 @@ const appMiddleware = store => next => action => {
       
     case SET_LANGUAGE:
       setLocale(action.lang);
+      break;
+      
+    case NAVIGATE_TO_ROUTE:
+      Logger.dumpLog(action);
+      store.dispatch(setLastScreenName(action.routeName));
+      store.dispatch(toggleMenuOpener());
       break;
   }
 }
