@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ComponentForScreen } from '../components/ComponentForScreen';
-import { Animated, Easing } from 'react-native';
+import { Animated, Easing, View } from 'react-native';
 import {
 	ScreenView,
 	Button,
@@ -103,9 +103,10 @@ export class AnimatedScreen extends ComponentForScreen {
       <Button
         title={this.extra_button.title}
         onPress={() => this.onExtraButtonPress()}
-        style={[css.btn_home, css.btn_home2, this.state.css.extra_btn, { marginTop: em(1) }]}
+        style={[css.btn_home, css.btn_home3, this.state.css.extra_btn, { marginTop: em(1) }]}
         disabled={!!this.state.disabled}
         disabledStyle={css.btn_home2_disabled}
+        textStyle={css.btn_home3_txt}
       />
     )
   }
@@ -153,15 +154,18 @@ export class AnimatedScreen extends ComponentForScreen {
 	
 	render() {
 		let item_css = this.state.css.container;
+    let outer_css = css.bg_image_inner_centerd;
 		
 		return (
 			<ScreenView>
         <BgImage>
-  				<Animated.View style={item_css}>
-  					{this.getButton(1)}
-  					{this.getButton(2)}
-            {this.extraButton()}
-          </Animated.View>
+          <View style={outer_css}>
+    				<Animated.View style={item_css}>
+    					{this.getButton(1)}
+    					{this.getButton(2)}
+              {this.extraButton()}
+            </Animated.View>
+          </View>
         </BgImage>
 			</ScreenView>
 		);

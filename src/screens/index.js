@@ -2,7 +2,8 @@ import { registerDrawerScreens, registerDrawerOptions } from './config';
 import { AnimatedScreen } from './AnimatedScreen';
 import { ScreenHome } from './ScreenHome';
 import { ScreenLanguages } from './ScreenLanguages';
-import { ScreenAppInfo } from './ScreenAppInfo';
+import { ScreenMap } from './ScreenMap';
+import { ScreenMap2 } from './ScreenMap2';
 
 module.exports = {
 	registerDrawerScreens,
@@ -11,5 +12,6 @@ module.exports = {
 	AnimatedScreen,
 	ScreenHome,
 	ScreenLanguages,
-	ScreenAppInfo,
+	ScreenMap,
+	ScreenMap2,
 };

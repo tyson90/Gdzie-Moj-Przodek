@@ -4,7 +4,8 @@ import { DrawerItems } from '../../components/DrawerItems';
 import { Drawer } from '../../components/Drawer';
 import {
 	ScreenHome,
-	ScreenAppInfo,
+	ScreenMap,
+	ScreenMap2,
 } from '../';
 
 import { css, colors } from '../../css';
@@ -12,7 +13,8 @@ import { css, colors } from '../../css';
 export function registerDrawerScreens() {
 	return {
 		'ds.home': { screen: ScreenHome },
-		'ds.mapa': { screen: ScreenAppInfo },
+		'ds.mapa': { screen: ScreenMap, params: { graves: 'celebrities' } },
+		'ds.mapa2': { screen: ScreenMap2, params: { graves: 'my' } },
 	}
 }
 

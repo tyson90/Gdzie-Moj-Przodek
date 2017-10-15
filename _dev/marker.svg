@@ -42,6 +42,18 @@
          stdDeviation="0.92251275"
          id="feGaussianBlur3899-6" />
     </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter3897-7-8"
+       x="-0.068604708"
+       width="1.1372094"
+       y="-0.10750255"
+       height="1.2150052">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.92251275"
+         id="feGaussianBlur3899-6-5" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -50,11 +62,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="-151.67788"
-     inkscape:cy="315.03218"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="-456.86716"
+     inkscape:cy="203.4724"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g4285-8"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -62,7 +74,12 @@
      inkscape:window-height="706"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1">
+     inkscape:window-maximized="1"
+     inkscape:object-paths="true"
+     inkscape:snap-bbox="false"
+     inkscape:snap-center="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-global="false">
     <sodipodi:guide
        orientation="0,1"
        position="117.95759,374.90514"
@@ -78,6 +95,11 @@
        orientation="0,1"
        id="guide4200"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="-475.23836,253.35915"
+       orientation="1,0"
+       id="guide118"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -87,7 +109,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -287,6 +309,100 @@
          cx="-40.072781"
          id="path4177-1"
          style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.60500002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4285-8"
+       transform="matrix(1.8578204,0,0,1.8578204,-399.33648,-479.62199)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="C:\Users\Kostek\Documents\WawCode\Apps\GdzieMojPrzodek\Gdzie-Moj-Przodek\src\images\marker-grove.png">
+      <rect
+         style="fill:#ff2a2a;stroke-width:0.70718211"
+         id="rect110"
+         width="72.47184"
+         height="52.914627"
+         x="-77.091255"
+         y="666.159"
+         inkscape:export-xdpi="89.800003"
+         inkscape:export-ydpi="89.800003"
+         inkscape:export-filename="C:\Users\Kostek\Documents\WawCode\Apps\GdzieMojPrzodek\Gdzie-Moj-Przodek\src\images\marker-my-grove.png" />
+      <g
+         id="g108">
+        <path
+           transform="matrix(-1.2946991,0.23718877,0.21717837,1.3333333,-32.832519,-213.129)"
+           inkscape:transform-center-x="26.830682"
+           inkscape:transform-center-y="-25.876545"
+           sodipodi:nodetypes="sscssss"
+           inkscape:connector-curvature="0"
+           id="path90"
+           d="m 143.49992,663.22054 c -1.38722,2.41093 -6.11572,5.97005 -11.70571,8.92644 -5.59,2.95638 -10.94022,5.31003 -11.36837,5.31003 -0.40052,0.004 -3.10252,-2.34679 -5.35687,-5.30267 -2.25434,-2.95588 -2.95968,-6.51695 -1.56905,-8.9338 2.98121,-5.18118 10.90908,-8.34485 19.80156,-8.34485 8.89248,0 13.17965,3.16367 10.19844,8.34485 z"
+           style="opacity:0.3;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;filter:url(#filter3897-7-8)" />
+        <path
+           style="opacity:0.3;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;filter:url(#filter3897-7-8)"
+           d="m 143.49992,663.22054 c -1.38722,2.41093 -6.11572,5.97005 -11.70571,8.92644 -5.59,2.95638 -10.94022,5.31003 -11.36837,5.31003 -0.40052,0.004 -3.10252,-2.34679 -5.35687,-5.30267 -2.25434,-2.95588 -2.95968,-6.51695 -1.56905,-8.9338 2.98121,-5.18118 10.90908,-8.34485 19.80156,-8.34485 8.89248,0 13.17965,3.16367 10.19844,8.34485 z"
+           id="path4159-3-0"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sscssss"
+           inkscape:transform-center-y="-13.876545"
+           inkscape:transform-center-x="-13.830681"
+           transform="matrix(1.2946991,0.23718877,-0.21717837,1.3333333,-48.878157,-213.129)" />
+        <path
+           sodipodi:nodetypes="sscssss"
+           inkscape:connector-curvature="0"
+           id="path4163-5-7"
+           d="m -20.243998,686.104 c 0,5.51718 -3.57416,13.66187 -8.759373,20.42728 -5.185226,6.7654 -10.51316,12.15151 -11.084026,12.15151 -0.530907,0.009 -5.937134,-5.37041 -11.21064,-12.13465 -5.273507,-6.76426 -8.94596,-14.91342 -8.94596,-20.44414 0,-11.85663 8.14336,-19.09639 20,-19.09639 11.856639,0 19.999999,7.23976 19.999999,19.09639 z"
+           style="fill:#009b00;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+        <circle
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.60500002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path4177-1-3"
+           cx="-40.072781"
+           cy="686.47125"
+           r="12.24497" />
+      </g>
+      <rect
+         inkscape:export-filename="C:\Users\Kostek\Documents\WawCode\Apps\GdzieMojPrzodek\Gdzie-Moj-Przodek\src\images\marker.png"
+         inkscape:export-ydpi="89.800003"
+         inkscape:export-xdpi="89.800003"
+         y="737.05713"
+         x="55.827065"
+         height="78.901703"
+         width="108.06372"
+         id="rect3809"
+         style="fill:none;stroke-width:1.05448866" />
+      <g
+         id="g3819"
+         transform="matrix(1.4911132,0,0,1.4911132,170.77883,-256.26154)">
+        <path
+           style="opacity:0.3;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;filter:url(#filter3897-7-8)"
+           d="m 143.49992,663.22054 c -1.38722,2.41093 -6.11572,5.97005 -11.70571,8.92644 -5.59,2.95638 -10.94022,5.31003 -11.36837,5.31003 -0.40052,0.004 -3.10252,-2.34679 -5.35687,-5.30267 -2.25434,-2.95588 -2.95968,-6.51695 -1.56905,-8.9338 2.98121,-5.18118 10.90908,-8.34485 19.80156,-8.34485 8.89248,0 13.17965,3.16367 10.19844,8.34485 z"
+           id="path3811"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sscssss"
+           inkscape:transform-center-y="-25.876545"
+           inkscape:transform-center-x="26.830682"
+           transform="matrix(-1.2946991,0.23718877,0.21717837,1.3333333,-32.832519,-213.129)" />
+        <path
+           transform="matrix(1.2946991,0.23718877,-0.21717837,1.3333333,-48.878157,-213.129)"
+           inkscape:transform-center-x="-13.830681"
+           inkscape:transform-center-y="-13.876545"
+           sodipodi:nodetypes="sscssss"
+           inkscape:connector-curvature="0"
+           id="path3813"
+           d="m 143.49992,663.22054 c -1.38722,2.41093 -6.11572,5.97005 -11.70571,8.92644 -5.59,2.95638 -10.94022,5.31003 -11.36837,5.31003 -0.40052,0.004 -3.10252,-2.34679 -5.35687,-5.30267 -2.25434,-2.95588 -2.95968,-6.51695 -1.56905,-8.9338 2.98121,-5.18118 10.90908,-8.34485 19.80156,-8.34485 8.89248,0 13.17965,3.16367 10.19844,8.34485 z"
+           style="opacity:0.3;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;filter:url(#filter3897-7-8)" />
+        <path
+           style="fill:#0088ff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           d="m -20.243998,686.104 c 0,5.51718 -3.57416,13.66187 -8.759373,20.42728 -5.185226,6.7654 -10.51316,12.15151 -11.084026,12.15151 -0.530907,0.009 -5.937134,-5.37041 -11.21064,-12.13465 -5.273507,-6.76426 -8.94596,-14.91342 -8.94596,-20.44414 0,-11.85663 8.14336,-19.09639 20,-19.09639 11.856639,0 19.999999,7.23976 19.999999,19.09639 z"
+           id="path3815"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sscssss" />
+        <circle
+           r="12.24497"
+           cy="686.47125"
+           cx="-40.072781"
+           id="circle3817"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.60500002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      </g>
     </g>
   </g>
 </svg>

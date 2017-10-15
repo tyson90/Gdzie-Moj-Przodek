@@ -9,6 +9,6 @@ export const Button = (props) => (
   	title={props.title}
   	onPress={() => props.onPress()}
   	buttonStyle={[css.btn, props.style]}
-  	textStyle={css.btn_txt}
+  	textStyle={css.btn_txt, props.textStyle}
   />
 )

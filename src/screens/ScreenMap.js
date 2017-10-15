@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import {
 	View,
 	Keyboard,
+	Linking,
 } from 'react-native';
 import { FormLabel, FormInput } from 'react-native-elements';
 
@@ -15,7 +16,8 @@ import {
 	Text,
 	Button,
 	Input,
-	GroveForm
+	GroveForm,
+	GroveCollout,
 } from '../components';
 
 import MapView from 'react-native-maps';
@@ -29,6 +31,7 @@ import { mapZoomIn } from '../actions';
 class Screen extends ComponentForScreen {
 	constructor(...args) {
 		super(...args);
+		// Logger.dumpLog(this.props);
 		
 		this.base_delta = {
 			lat: 0.1,
@@ -107,9 +110,31 @@ class Screen extends ComponentForScreen {
 		}, callback);
 	}
 	
-	// getGroveForm() {
-	// 	return (<GroveForm />);
-	// }
+	navigateToGrove(marker) {
+		Logger.log('Navigate...');
+		Logger.dumpLog(marker);
+		Linking.openURL(`http://maps.google.com/maps?q=${marker.latlng.latitude},${marker.latlng.longitude}`);
+	}
+	
+	renderMarker(marker, i) {
+		return (marker.type != 'cementary') && this.props.zoom == zooms.out ? null : (
+			<MapView.Marker
+			  coordinate={marker.latlng}
+			  title={marker.title}
+			  description={marker.description}
+			  image={getMarkerIcon(marker.type)}
+			  key={i}
+			  onPress={(pos) => { this.showCementary(pos) }}
+			>
+			  <MapView.Callout
+			  	tooltip={false}
+			  	onPress={() => this.navigateToGrove(marker)}
+			  >
+			    <GroveCollout {...marker} />
+			  </MapView.Callout>
+			</MapView.Marker>
+		)
+	}
   
   render() {
   	let region = Object.assign({}, this.state.region);
@@ -125,14 +150,7 @@ class Screen extends ComponentForScreen {
 			      mapType={this.props.zoom == zooms.in ? 'hybrid' : 'standard'}
 			    >
 			    	{markers.map((marker, i) => (
-						    <MapView.Marker
-						      coordinate={marker.latlng}
-						      title={marker.title}
-						      description={marker.description}
-						      image={getMarkerIcon()}
-						      key={i}
-						      onPress={(pos) => { this.showCementary(pos) }}
-						    />
+						    this.renderMarker(marker, i)
 						  ))}
 		    	</MapView>
 			  </View>
@@ -151,4 +169,4 @@ const mapDispatchToProps = dispatch => ({
   showCementary: () => dispatch(mapZoomIn()),
 });
 
-export const ScreenAppInfo = connect(mapStateToProps, mapDispatchToProps)(Screen);
+export const ScreenMap = connect(mapStateToProps, mapDispatchToProps)(Screen);

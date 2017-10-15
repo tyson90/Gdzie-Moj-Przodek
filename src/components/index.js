@@ -20,6 +20,7 @@ import { DrawerLabel } from './DrawerLabel';
 import { LangItem } from './LangItem';
 import { Err } from './Err';
 import { GroveForm } from './GroveForm';
+import { GroveCollout } from './GroveCollout';
 
 module.exports = {
 	Col,
@@ -44,5 +45,6 @@ module.exports = {
 	LangItem,
 	Err,
 	GroveForm,
+	GroveCollout,
 }
 

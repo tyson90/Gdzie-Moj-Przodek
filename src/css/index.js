@@ -266,6 +266,14 @@ const app_css = {
   btn_home2_disabled: {
     backgroundColor: colors.secondary_disabled,
   },
+  btn_home3: {
+    backgroundColor: colors.white,
+  },
+  btn_home3_txt: {
+    color: colors.light,
+    fontSize: em(1.5),
+    fontWeight: 'bold',
+  },
   
   background: {
     flex: 1,
@@ -322,6 +330,12 @@ const app_css = {
       // borderColor: 'blue',
       // borderRadius: 2,
     },
+  },
+  
+  bg_image_inner_centerd: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   
   columns: {
@@ -488,16 +502,21 @@ const app_css = {
     },
     opener: {
       borderRadius: 0,
+      width: '100%',
+    },
+    opener_txt: {
+      textAlign: 'center',
+      width: '100%',
     },
     
     form: {
       backgroundColor: colors.white,
       width: '100%',
       // height: 500,
-      borderWidth: 2,
-      borderStyle: 'dashed',
-      borderColor: 'cyan',
-      borderRadius: 2,
+      // borderWidth: 2,
+      // borderStyle: 'dashed',
+      // borderColor: 'cyan',
+      // borderRadius: 2,
     },
     label: {
       fontSize: em(1.3),
@@ -517,6 +536,33 @@ const app_css = {
     },
     placeholder: {
       color: rgba(colors.light, '22'),
+    },
+    btns: {
+      flex: 1,
+      width: '100%',
+    },
+  },
+  
+  callout: {
+    wrapper: {
+      width: 250,
+      maxWidth: vw(100),
+    },
+    label: {
+      color: colors.light,
+      marginBottom: em(0.5),
+      fontWeight: 'bold',
+    },
+    desc: {
+      fontWeight: 'normal',
+    },
+    btn: {
+      width: 'auto',
+      paddingVertical: 3,
+      marginHorizontal: 0,
+    },
+    btn_txt: {
+      
     },
   },
 }

@@ -1,8 +1,13 @@
 import { Logger } from './Helper';
 
 export class MyDB {
+	_db_data = {
+		grave: [],
+		graveyard: [],
+	}
+	
 	add(tbl, col, val) {
-		fakeDb[tbl].push({
+		this._db_data[tbl].push({
 			[col]: val
 		});
 		
@@ -19,5 +24,5 @@ const DataBase = new MyDB();
 
 module.exports = {
 	DataBase,
-	fakeDb,
+	// fakeDb,
 }
