@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addNavigationHelpers } from 'react-navigation';
-import { PropTypes } from 'prop-types';
+// import { PropTypes } from 'prop-types';
 import { Text } from './Text';
 
 import { css } from '../css';
@@ -24,11 +24,11 @@ export class Label extends Component {
   }
 }
 
-Label.propTypes = {
-	title: PropTypes.string.isRequired,
-	translated: PropTypes.bool,
-	route: PropTypes.string.isRequired,
-}
+// Label.propTypes = {
+// 	title: PropTypes.string.isRequired,
+// 	translated: PropTypes.bool,
+// 	route: PropTypes.string.isRequired,
+// }
 
 Label.defaultProps = {
 	translated: false,
