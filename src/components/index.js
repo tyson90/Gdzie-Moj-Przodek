@@ -19,6 +19,7 @@ import { Grid } from './Grid';
 import { DrawerLabel } from './DrawerLabel';
 import { LangItem } from './LangItem';
 import { Err } from './Err';
+import { GroveForm } from './GroveForm';
 
 module.exports = {
 	Col,
@@ -42,5 +43,6 @@ module.exports = {
 	DrawerLabel,
 	LangItem,
 	Err,
+	GroveForm,
 }
 

@@ -5,6 +5,7 @@ import {
 	ScreenView,
 	Button,
 	Item,
+  BgImage,
 } from '../components';
 
 import { interpolate } from '../Helper';
@@ -155,11 +156,13 @@ export class AnimatedScreen extends ComponentForScreen {
 		
 		return (
 			<ScreenView>
-				<Animated.View style={item_css}>
-					{this.getButton(1)}
-					{this.getButton(2)}
-          {this.extraButton()}
-        </Animated.View>
+        <BgImage>
+  				<Animated.View style={item_css}>
+  					{this.getButton(1)}
+  					{this.getButton(2)}
+            {this.extraButton()}
+          </Animated.View>
+        </BgImage>
 			</ScreenView>
 		);
 	}

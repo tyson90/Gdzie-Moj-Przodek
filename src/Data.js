@@ -15,6 +15,6 @@ export const getMarkerIcon = () => (
 )
 
 export const zooms = {
-	in: 0.08,
+	in: 0.080,
 	out: 5,
 }

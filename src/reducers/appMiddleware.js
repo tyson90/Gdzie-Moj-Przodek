@@ -43,14 +43,19 @@ const appMiddleware = store => next => action => {
       store.dispatch(toggleMenuOpener());
       break;
       
-    case ZOOM_IN:
-      Logger.log(prevState.app.zoom, zooms.in)
-      if (prevState.app.zoom != zooms.in) mapZoomIn();
-      break;
+    // case ZOOM_IN:
+    //   Logger.log(prevState.app.zoom, zooms.in)
+    //   if (prevState.app.zoom != zooms.in) {
+    //     Logger.log('bede zoomowal');
+    //     setTimeout(() => {
+    //       store.dispatch(mapZoomIn(false));
+    //     }, 0);
+    //   }
+    //   break;
       
-    case ZOOM_OUT:
-      if (prevState.app.zoom != zooms.out) mapZoomOut();
-      break;
+    // case ZOOM_OUT:
+    //   if (prevState.app.zoom != zooms.out) mapZoomOut();
+    //   break;
   }
 }
 

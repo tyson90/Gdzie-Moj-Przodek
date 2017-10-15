@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
 import { ComponentForScreen } from '../components/ComponentForScreen';
 import { connect } from 'react-redux';
-import { View } from 'react-native';
-import { DeviceInfo } from 'react-native';
-// import DeviceInfo from 'react-native-device-info';
+import {
+	View,
+	Keyboard,
+} from 'react-native';
+import { FormLabel, FormInput } from 'react-native-elements';
+
 import {
 	DrawerLabel,
 	ScreenView,
 	Grid,
 	Item,
 	Text,
-	Err,
+	Button,
+	Input,
+	GroveForm
 } from '../components';
 
 import MapView from 'react-native-maps';
 
 import { Logger } from '../Helper';
 import { _ } from '../i18n';
-import { css } from '../css';
+import { css, colors } from '../css';
 import { markers, getMarkerIcon, zooms } from '../Data';
 import { mapZoomIn } from '../actions';
 
@@ -26,22 +31,17 @@ class Screen extends ComponentForScreen {
 		super(...args);
 		
 		this.base_delta = {
-			lat: 0.0922,
-			lng: 0.0421,
+			lat: 0.1,
+			lng: 0.1,
 		}
 		
 		this.state = this.getInitialState();
 	}
-	
-	static navigationOptions = {
-    drawerLabel: (<DrawerLabel title={'menu.mapa'} route={'ds.mapa'} />),
-  }
   
-  shouldComponentUpdate(nextProps, nextState) {
-  	let should = true;
-  	Logger.dumpLog(this.props);
-  	
-  	return should;
+  mergeState(newState={}, callback=()=>{}) {
+  	this.setState(prevSate => {
+  		return Object.assign(prevSate, newState);
+  	}, () => {callback()});
   }
   
   getInitialState() {
@@ -49,36 +49,79 @@ class Screen extends ComponentForScreen {
 	    region: {
 	      latitude: 52.2297700,
 	      longitude: 21.0117800,
-        latitudeDelta: this.base_delta.lat * this.props.zoom,
-	      longitudeDelta: this.base_delta.lng * this.props.zoom,
+        latitudeDelta: this.base_delta.lat * zooms.out,
+	      longitudeDelta: this.base_delta.lng * zooms.out,
 	    },
+	    initial: true,
+	    submitting: false,
 	  };
 	}
+	
+	static navigationOptions = {
+    drawerLabel: (<DrawerLabel title={'menu.mapa'} route={'ds.mapa'} />),
+  }
+  
+  componentDidMount() {
+  	this.mergeState(this.getInitialState(), () => {
+  		navigator.geolocation.getCurrentPosition(pos => {
+	  		Logger.log('Success get position');
+	  		Logger.dumpLog(pos);
+	  		this.updatePos({
+	  			latitude: pos.coords.latitude,
+	  			longitude: pos.coords.longitude,
+	  		});
+	  	}, err => {
+	  		Logger.log('Error get position');
+	  		Logger.dumpLog(err);
+	  	});
+  	});
+  }
+  
+  // shouldComponentUpdate(nextProps, nextState) {
+  // 	let should = true;
+  // // 	Logger.dumpLog(this.props);
+  	
+  // 	return should;
+  // }
 
 	onRegionChange(region) {
-		Logger.dumpLog(region);
-	  this.setState({ region });
+		// Logger.dumpLog(region);
+	  this.mergeState({
+			retion: region
+		});
 	}
 	
 	showCementary(pos) {
-		Logger.dumpLog(pos.nativeEvent);
-		this.setState({
+		this.updatePos(pos.nativeEvent.coordinate, () => { this.props.showCementary() });
+	}
+	
+	updatePos(pos, callback=()=>{}) {
+		this.mergeState({
 			region: {
-				latitude: pos.nativeEvent.coordinate.latitude,
-				longitude: pos.nativeEvent.coordinate.longitude,
+				latitude: pos.latitude,
+				longitude: pos.longitude,
         latitudeDelta: this.base_delta.lat * this.props.zoom,
 	      longitudeDelta: this.base_delta.lng * this.props.zoom,
-			}
-		}, () => { this.props.showCementary() })
+			},
+			initial: false,
+		}, callback);
 	}
+	
+	// getGroveForm() {
+	// 	return (<GroveForm />);
+	// }
   
   render() {
+  	let region = Object.assign({}, this.state.region);
+  	if (this.state.initial) region.latitudeDelta = this.base_delta.lat * this.props.zoom;
+    if (this.state.initial) region.longitudeDelta = this.base_delta.lng * this.props.zoom;
+  	
 		return (
 			<ScreenView>
 				<View style={css.map.wrapper}>
 					<MapView style={[css.map.wrapper, css.map.inner]}
-			      region={this.state.region}
-			      onRegionChange={(region) => { this.onRegionChange(region) }}
+			      region={region}
+			      onRegionChangeComplete={(region) => { this.onRegionChange(region) }}
 			      mapType={this.props.zoom == zooms.in ? 'hybrid' : 'standard'}
 			    >
 			    	{markers.map((marker, i) => (
@@ -91,8 +134,9 @@ class Screen extends ComponentForScreen {
 						      onPress={(pos) => { this.showCementary(pos) }}
 						    />
 						  ))}
-			    	</MapView>
+		    	</MapView>
 			  </View>
+			  <GroveForm />
 			</ScreenView>
 		);
 	}

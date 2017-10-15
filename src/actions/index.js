@@ -52,9 +52,10 @@ export function setLastScreenName(name) {
 	}
 }
 
-export function mapZoomIn() {
+export function mapZoomIn(realy=false) {
 	return {
 		type: ZOOM_IN,
+		realy
 	}
 }
 

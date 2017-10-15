@@ -52,6 +52,7 @@ export const colors = {
 	on_secondary: palette.light,
 	menu: palette.white,
   error: palette.error,
+  white: '#fefefe',
 }
 
 const double = x => {
@@ -75,6 +76,10 @@ export const vw = m => {
 
 export const vh = m => {
   return double(m / 100 * height);
+}
+
+export const rgba = (hex, trans) => {
+  return hex + trans;
 }
 
 const app_css = {
@@ -459,6 +464,8 @@ const app_css = {
     wrapper: {
       flex: 1,
       width: '100%',
+      zIndex: 1,
+      position: 'relative',
       // borderWidth: 2,
       // borderStyle: 'dashed',
       // borderColor: 'cyan',
@@ -467,6 +474,49 @@ const app_css = {
     inner: {
       // borderColor: 'red',
       // borderStyle: 'dotted',
+    },
+  },
+  
+  form: {
+    wrapper: {
+      flex: 0,
+      width: '100%',
+      // height: em(4),
+      position: 'absolute',
+      bottom: 5,
+      zIndex: 15,
+    },
+    opener: {
+      borderRadius: 0,
+    },
+    
+    form: {
+      backgroundColor: colors.white,
+      width: '100%',
+      // height: 500,
+      borderWidth: 2,
+      borderStyle: 'dashed',
+      borderColor: 'cyan',
+      borderRadius: 2,
+    },
+    label: {
+      fontSize: em(1.3),
+      color: colors.secondary,
+    },
+    input: {
+      // backgroundColor: 'red',
+      // borderBottomColor: colors.secondary,
+      // borderBottomStyle: 'solid',
+      // borderBottomWidth: 3,
+    },
+    input_text: {
+      color: colors.light,
+      // paddingVertical: em(0.5),
+      paddingHorizontal: em(0.5),
+      fontSize: em(1.3),
+    },
+    placeholder: {
+      color: rgba(colors.light, '22'),
     },
   },
 }

@@ -59,7 +59,7 @@ export function app(state=defaultState, action) {
 			
 		case ZOOM_IN:
 			nextState = Object.assign({}, state, {
-				zoom: zooms.in
+				zoom: action.realy ? zooms.in2 : zooms.in
 			});
 			// Logger.dumpLog(nextState);
 			break;

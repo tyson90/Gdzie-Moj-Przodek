@@ -14,7 +14,7 @@ class Screen extends AnimatedScreen {
 		this.buttons[0].title = _('');
 		this.buttons[1].title = _('');
 		
-		this.extra_button.url = 'Menu';
+		this.extra_button.url = 'ds.mapa';
 		this.extra_button.title = _('btn.Wybierz_Cmentarz');
 		this.extra_button.static = true;
 	}
