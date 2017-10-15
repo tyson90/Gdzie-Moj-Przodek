@@ -73,7 +73,7 @@ export class GroveForm extends Component {
 				submitting: true,
 				error: false,
 			}, () => {
-				this.addToDb(this.state.name);
+				// this.addToDb(this.state.name);
 			});
 		}
 	}

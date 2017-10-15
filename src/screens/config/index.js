@@ -6,6 +6,10 @@ import {
 	ScreenHome,
 	ScreenMap,
 	ScreenMap2,
+	
+	SG1,
+	SG2,
+	SMG1,
 } from '../';
 
 import { css, colors } from '../../css';
@@ -14,7 +18,10 @@ export function registerDrawerScreens() {
 	return {
 		'ds.home': { screen: ScreenHome },
 		'ds.mapa': { screen: ScreenMap, params: { graves: 'celebrities' } },
+			'ds.g1': { screen: SG1 },
+			'ds.g2': { screen: SG2 },
 		'ds.mapa2': { screen: ScreenMap2, params: { graves: 'my' } },
+			'ds.mg1': { screen: SMG1 },
 	}
 }
 
