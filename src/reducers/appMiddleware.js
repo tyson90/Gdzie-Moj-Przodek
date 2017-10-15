@@ -23,7 +23,7 @@ import { setLocale } from '../i18n';
 import { zooms } from '../Data';
 
 const appMiddleware = store => next => action => {
-  Logger.log("Middleware triggered:", action.type);
+  // Logger.log("Middleware triggered:", action.type);
   
   let prevState = store.getState(),
   		nextState = next(action);

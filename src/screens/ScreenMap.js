@@ -112,7 +112,7 @@ class Screen extends ComponentForScreen {
 	
 	navigateToGrove(marker) {
 		Logger.log('Navigate...');
-		Logger.dumpLog(marker);
+		// Logger.dumpLog(marker);
 		Linking.openURL(`http://maps.google.com/maps?q=${marker.latlng.latitude},${marker.latlng.longitude}`);
 	}
 	

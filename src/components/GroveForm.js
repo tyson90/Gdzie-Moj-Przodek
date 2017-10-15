@@ -45,7 +45,7 @@ export class GroveForm extends Component {
   		kb_height: evt.endCoordinates.height - em(4),
   	}, () => {
 	  	Logger.log('Keyboard Shown');
-  		Logger.dumpLog(this.state);
+  		// Logger.dumpLog(this.state);
   	});
   }
   
